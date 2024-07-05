@@ -9,7 +9,7 @@ ruta.get('/', async (req, res) => {
 
 ruta.post('/addProd', async (req, res) => {
   try {
-    const { Serie, imagen, precio, Descripcion, Caracteristicas, stock, estado } = req.body;
+    const { Serie, imagen, precio, Descripcion, Caracteristicas, stock, estado, MarcaId } = req.body;
 
     const nuevoProducto = await db.Modelo.create({
       Serie,
@@ -19,6 +19,7 @@ ruta.post('/addProd', async (req, res) => {
       Caracteristicas,
       stock,
       estado,
+      MarcaId
     });
 
     res.status(201).json(nuevoProducto);

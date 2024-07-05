@@ -51,6 +51,7 @@ const AgregarProd = () => {
       throw new Error('Error al agregar producto');
     }
 
+    // Limpiar formulario después de agregar
     setNombre('');
     setDescripcion('');
     setCaracteristicas('');
@@ -139,6 +140,20 @@ const AgregarProd = () => {
                     value={caracteristicas}
                     onChange={(e) => setCaracteristicas(e.target.value)}
                   />
+                </p>
+                <p>
+                  <label>Marca</label>
+                  <br />
+                  <select
+                    id="add-marca"
+                    value={marcaId}
+                    onChange={(e) => setMarcaId(e.target.value)}
+                  >
+                    <option value="">Selecciona una marca</option>
+                    {marcas.map(marca => (
+                      <option key={marca.id} value={marca.id}>{marca.nombre}</option>
+                    ))}
+                  </select>
                 </p>
                 <p>
                   <label>Precio</label>
