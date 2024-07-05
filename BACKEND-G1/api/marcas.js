@@ -20,4 +20,31 @@ ruta.get('/:id', async (req, res) => {
   }
 });
 
+ruta.post('/newMarca', async (req, res) => {
+  try {
+    const { nombre, fecha_creacion } = req.body;
+
+    const lastMarca = await db.Marca.findOne({
+      order: [['id', 'DESC']],
+    });
+
+    let nextId = 1;
+
+    if (lastMarca) {
+      nextId = lastMarca.id + 1;
+    }
+
+    const nuevaMarca = await db.Marca.create({
+      id: nextId,
+      nombre,
+      fecha_creacion,
+    });
+
+    res.status(201).json(nuevaMarca);
+  } catch (error) {
+    console.error('Error al crear marca:', error);
+    res.status(500).json({ error: 'Error al crear marca', details: error.message });
+  }
+});
+
 module.exports = ruta;
