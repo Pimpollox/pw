@@ -1,0 +1,42 @@
+CONECTA A BASE DE DATOS - TABLA USERS, ORDERS, MARCAS, MODELOS
+revisar tablas (modelos++)
+
+producCart: cambiar precio a INT **
+
+
+funciona:
+productDetail.jsx --> llama a marcasContext y modelosContext
+/pages
+
+hechas:
+- Login.jsx
+- UsuariosRegistrados.jsx
+- ordenesAdmin.jsx
+- userOrd.jsx
+- dashboard.jsx
+
+- ListProd.jsx
+- Series.jsx
+
+--------------------------------------------------------------------------
+user:
+funciona todo menos updateDatos y newPassword
+--------------------------------------------------------------------------
+
+mejorar:
+- headerPrincipal
+mejorar el despliegue del boton "cuenta"
+
+
+no funciona:
+
+- api usuarios '/newUser'
+registrar data en bd
+
+- userRegister.jsx
+-----------------------------------------------------------------------------------------
+PRINCIPAL:
+CartContext: Proporciona un contexto para manejar el carrito de compras. Permite agregar, eliminar y actualizar la cantidad de productos en el carrito.
+ProductCard: Muestra la tarjeta de un producto con un botón para agregarlo al carrito y un enlace para ver más detalles del producto.
+ProductDetail: Muestra los detalles de un producto específico basado en el serieId que se obtiene de la URL.
+CollectionCard: Muestra una tarjeta de colección con una imagen de fondo y el nombre de la colección.

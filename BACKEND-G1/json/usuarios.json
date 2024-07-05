@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "nombre": "Antonio",
+        "apellido": "Lopez Caro",
+        "correo": "correo@sanchez.com",
+        "contraseña": "123",
+        "fecha_registro": "2022-02-11",
+        "estado": "Activo",
+        "tipo": 2
+    },
+    {
+        "id": 2,
+        "nombre": "Ana",
+        "apellido": "Sanchez",
+        "correo": "anila123@hotmail.com",
+        "contraseña": "123",
+        "fecha_registro": "2022-02-11",
+        "estado": "Inactivo",
+        "tipo": 1
+    },
+    {
+        "id": 3,
+        "nombre": "Antony",
+        "apellido": "Martinez Caro",
+        "correo": "antony.correo@martinez.com",
+        "contraseña": "123",
+        "fecha_registro": "2022-02-11",
+        "estado": "Activo",
+        "tipo": 1
+    },
+    {
+        "id": 4,
+        "nombre": "Maria",
+        "apellido": "Perez",
+        "correo": "maria.perez@example.com",
+        "contraseña": "123",
+        "fecha_registro": "2022-03-12",
+        "estado": "Activo",
+        "tipo": 1
+    },
+    {
+        "id": 5,
+        "nombre": "Carlos",
+        "apellido": "Garcia",
+        "correo": "carlos.garcia@example.com",
+        "contraseña": "123",
+        "fecha_registro": "2022-04-15",
+        "estado": "Inactivo",
+        "tipo": 1
+    },
+    {
+        "id": 6,
+        "nombre": "Luis",
+        "apellido": "Martinez",
+        "correo": "luis.martinez@example.com",
+        "contraseña": "123",
+        "fecha_registro": "2022-05-20",
+        "estado": "Activo",
+        "tipo": 1
+    },
+    {
+        "id": 7,
+        "nombre": "Laura",
+        "apellido": "Gonzalez",
+        "correo": "laura.gonzalez@example.com",
+        "contraseña": "123",
+        "fecha_registro": "2022-06-25",
+        "estado": "Inactivo",
+        "tipo": 1
+    },
+    {
+        "id": 8,
+        "nombre": "Miguel",
+        "apellido": "Hernandez",
+        "correo": "miguel.hernandez@example.com",
+        "contraseña": "123",
+        "fecha_registro": "2022-07-30",
+        "estado": "Activo",
+        "tipo": 1
+    },
+    {
+        "id": 9,
+        "nombre": "Sara",
+        "apellido": "Lopez",
+        "correo": "sara.lopez@example.com",
+        "contraseña": "123",
+        "fecha_registro": "2022-08-05",
+        "estado": "Inactivo",
+        "tipo": 1
+    },
+    {
+        "id": 10,
+        "nombre": "Jorge",
+        "apellido": "Gomez",
+        "correo": "jorge.gomez@example.com",
+        "contraseña": "123",
+        "fecha_registro": "2022-09-10",
+        "estado": "Activo",
+        "tipo": 1
+    },
+    {
+        "id": 11,
+        "nombre": "Elena",
+        "apellido": "Diaz",
+        "correo": "elena.diaz@example.com",
+        "contraseña": "123",
+        "fecha_registro": "2022-10-15",
+        "estado": "Inactivo",
+        "tipo": 1
+    },
+    {
+        "id": 12,
+        "nombre": "David",
+        "apellido": "Ruiz",
+        "correo": "david.ruiz@example.com",
+        "contraseña": "123",
+        "fecha_registro": "2022-11-20",
+        "estado": "Activo",
+        "tipo": 1
+    },
+    {
+        "id": 13,
+        "nombre": "Laura",
+        "apellido": "Vargas",
+        "correo": "laura.vargas@example.com",
+        "contraseña": "123",
+        "fecha_registro": "2022-12-25",
+        "estado": "Inactivo",
+        "tipo": 1
+    },
+    {
+        "id": 14,
+        "nombre": "Pedro",
+        "apellido": "Ramos",
+        "correo": "pedro.ramos@example.com",
+        "contraseña": "123",
+        "fecha_registro": "2023-01-30",
+        "estado": "Activo",
+        "tipo": 1
+    },
+    {
+        "id": 15,
+        "nombre": "Carmen",
+        "apellido": "Romero",
+        "correo": "carmen.romero@example.com",
+        "contraseña": "123",
+        "fecha_registro": "2023-02-05",
+        "estado": "Inactivo",
+        "tipo": 1
+    },
+    {
+        "id": 16,
+        "nombre": "Jose",
+        "apellido": "Moreno",
+        "correo": "jose.moreno@example.com",
+        "contraseña": "123",
+        "fecha_registro": "2023-03-10",
+        "estado": "Activo",
+        "tipo": 1
+    },
+    {
+        "id": 17,
+        "nombre": "Ana",
+        "apellido": "Jimenez",
+        "correo": "ana.jimenez@example.com",
+        "contraseña": "123",
+        "fecha_registro": "2023-04-15",
+        "estado": "Inactivo",
+        "tipo": 1
+    },
+    {
+        "id": 18,
+        "nombre": "Pablo",
+        "apellido": "Fernandez",
+        "correo": "pablo.fernandez@example.com",
+        "contraseña": "123",
+        "fecha_registro": "2023-05-20",
+        "estado": "Activo",
+        "tipo": 1
+    },
+    {
+        "id": 19,
+        "nombre": "Marta",
+        "apellido": "Gimenez",
+        "correo": "marta.gimenez@example.com",
+        "contraseña": "123",
+        "fecha_registro": "2023-06-25",
+        "estado": "Inactivo",
+        "tipo": 1
+    },
+    {
+        "id": 20,
+        "nombre": "Javier",
+        "apellido": "Blanco",
+        "correo": "javier.blanco@example.com",
+        "contraseña": "123",
+        "fecha_registro": "2023-07-30",
+        "estado": "Activo",
+        "tipo": 1
+    },
+    {
+        "id": 21,
+        "nombre": "Patricia",
+        "apellido": "Navarro",
+        "correo": "patricia.navarro@example.com",
+        "contraseña": "123",
+        "fecha_registro": "2023-08-05",
+        "estado": "Inactivo",
+        "tipo": 1
+    },
+    {
+        "id": 22,
+        "nombre": "Rafael",
+        "apellido": "Martinez",
+        "correo": "rafael.martinez@example.com",
+        "contraseña": "123",
+        "fecha_registro": "2023-09-10",
+        "estado": "Activo",
+        "tipo": 1
+    },
+    {
+        "id": 23,
+        "nombre": "Isabel",
+        "apellido": "Ortiz",
+        "correo": "isabel.ortiz@example.com",
+        "contraseña": "123",
+        "fecha_registro": "2023-10-15",
+        "estado": "Inactivo",
+        "tipo": 1
+    },
+    {
+        "id": 24,
+        "nombre": "Carlos",
+        "apellido": "Suarez",
+        "correo": "carlos.suarez@example.com",
+        "contraseña": "123",
+        "fecha_registro": "2023-11-20",
+        "estado": "Activo",
+        "tipo": 1
+    }
+]

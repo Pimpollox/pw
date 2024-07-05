@@ -1,0 +1,22 @@
+#PedidoC{
+    padding-left: 40px;
+}
+
+#Aviso1{
+    font-size: 25px;
+    text-align: center;
+}
+#Aviso2{
+    font-size: 25px;
+    text-align: center;
+}
+#Aviso3{
+    font-size: 25px;
+    text-align: left;
+}
+
+.ProductosI{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}

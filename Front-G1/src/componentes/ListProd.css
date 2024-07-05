@@ -1,0 +1,114 @@
+.container-listPr {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+  
+.listPr-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+  
+.listPr-header h3 {
+    margin: 0;
+    font-size: 24px;
+}
+  
+.search-cont {
+    margin-bottom: 20px;
+}
+  
+.search {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+  
+.list-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+  
+.list-table-header th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+  
+.list-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+  
+.list-table tbody td {
+    padding: 10px;
+}
+
+.list-desc{
+    border: 'none'; 
+    background-color: 'none'; 
+    font-Size: '14px';
+    color: 'gray'; 
+    padding: 0;
+    margin: 0;
+    cursor: 'pointer';
+}
+  
+.add-product-link {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0a0a0a;
+    color: #fff;
+    text-decoration: none; /* Para quitar el subrayado predeterminado */
+    border-radius: 5px;
+}
+  
+.add-product-link:hover {
+    background-color: #333; /* Gris oscuro al pasar el cursor */
+    color: #fff;
+}
+
+/*Paginacion*/
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+  
+.pagination ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.pagination ul li {
+    display: inline-block;
+    margin-right: 5px;
+}
+  
+.pagination ul li a {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+  
+.pagination ul li.active a {
+    background-color: #0056b3;
+}
+  
+.pagination ul li:hover a {
+    background-color: #0056b3;
+}
+  
+.pagination ul li:first-child,
+.pagination ul li:last-child {
+    margin-right: 0;
+}

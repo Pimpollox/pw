@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "nombre": "Swatch",
+        "fecha_creacion": "2022-02-11"
+    },
+    {
+        "id": 2,
+        "nombre": "G-shock",
+        "fecha_creacion": "2022-05-21"
+    },
+    {
+        "id": 3,
+        "nombre": "Fossil",
+        "fecha_creacion": "2023-01-17"
+    },
+    {
+        "id": 4,
+        "nombre": "Seiko",
+        "fecha_creacion": "2023-11-04"
+    },
+    {
+        "id": 5,
+        "nombre": "Casio",
+        "fecha_creacion": "2024-03-30"
+    }
+]

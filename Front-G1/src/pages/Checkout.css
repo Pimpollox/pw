@@ -1,0 +1,190 @@
+#Checkout{
+    padding: 30px;
+    padding-left: 50px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#Aviso{
+    font-size: 25px;
+}
+
+#DatosEnvio{
+    background-color: rgb(231, 231, 231);
+    margin-right: 5%;
+    font-size: 18px;
+    float: left;
+    padding-left: 50px;
+    padding-right: 25%;
+    padding-top: 10px;
+    border: 1px;
+    border-color: black;
+    border-radius: 1px;
+    border-style: groove;
+}
+#Pago{
+    padding-top: 10px;
+    text-align: left;
+    background-color: rgb(231, 231, 231);    
+    font-size: 16px;
+    margin-left: 50%;
+    margin-right: 30px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+    margin-bottom: 15px;
+    border: 1px;
+    border-color: black;
+    border-radius: 1px;
+    border-style: groove;
+}
+
+.inputTexto{
+    font-size: 18px;
+    padding-left: 30px;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 5px;
+    padding-left: 20px;
+    padding-right: 30px;
+}
+
+#FormaPago{
+    font-size: 20px;
+}
+
+#MetodoEnvio{
+    text-align: center;
+    background-color: rgb(231, 231, 231);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-right: 30px;
+    border: 1px;
+    border-color: black;
+    border-radius: 1px;
+    border-style: groove;
+}
+
+#Pedido{
+    background-color: rgb(231, 231, 231);
+    margin-right: 5%;
+    font-size: 18px;
+    float: left;
+    padding-left: 50px;
+    padding-right: 20%;
+    padding-top: 10px;
+    padding-bottom: 180px;
+    border: 1px;
+    border-color: black;
+    border-radius: 1px;
+    border-style: groove;
+
+}
+
+#Resumen{
+    padding-top: 10px;
+    text-align: left;
+    background-color: rgb(231, 231, 231);    
+    font-size: 18px;
+    margin-left: 50%;
+    margin-right: 30px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+    margin-bottom: 15px;
+    border: 1px;
+    border-color: black;
+    border-radius: 1px;
+    border-style: groove;
+}
+
+#ProductoPedido{
+    font-size: 18px;
+    text-align: right;
+    margin-right: 0px;
+}
+
+#ResumenPedido{
+    font-size: 18px;
+    text-align: center;
+}
+
+#OrdenButton{
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    background-color: black;
+    padding:15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 5px;
+}
+
+#Orden{
+    text-align: center;
+    margin-top: 10px;
+}
+
+/*
+#Checkout {
+  padding: 20px;
+}
+
+#Aviso {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+.Items, #DatosEnvio, #Pago, #MetodoEnvio, #Pedido, #Resumen {
+  margin-bottom: 20px;
+}
+
+.inputTexto {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  box-sizing: border-box;
+}
+
+#FormaPago, #NumTarjeta {
+  margin-bottom: 20px;
+}
+
+#ProductoPedido {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#ProductoPedido div {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+#ResumenPedido {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#Orden {
+  text-align: center;
+}
+
+#OrdenButton {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#OrdenButton a {
+  color: white;
+  text-decoration: none;
+}
+*/

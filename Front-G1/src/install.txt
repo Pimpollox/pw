@@ -1,0 +1,7 @@
+npm install
+npm install react-router-dom
+npm install react-datepicker
+npm install sweetalert2
+
+npm install http-proxy-middleware
+npm install react-modal

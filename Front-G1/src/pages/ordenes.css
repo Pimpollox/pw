@@ -1,0 +1,127 @@
+#ordenes{
+    padding: 30px;
+    padding-left: 50px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#Aviso1{
+    font-size: 25px;
+}
+
+#DatosEnvio1{
+    background-color: rgb(231, 231, 231);
+    margin-right: 5%;
+    font-size: 18px;
+    float: left;
+    padding-left: 50px;
+    padding-right: 25%;
+    padding-top: 10px;
+    border: 1px;
+    border-color: black;
+    border-radius: 1px;
+    border-style: groove;
+}
+#Pago1{
+    padding-top: 10px;
+    text-align: left;
+    background-color: rgb(231, 231, 231);    
+    font-size: 16px;
+    margin-left: 50%;
+    margin-right: 30px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+    margin-bottom: 15px;
+    border: 1px;
+    border-color: black;
+    border-radius: 1px;
+    border-style: groove;
+}
+
+.inputTexto{
+    font-size: 18px;
+    padding-left: 30px;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 5px;
+    padding-left: 20px;
+    padding-right: 30px;
+}
+
+#FormaPago1{
+    font-size: 20px;
+}
+
+#MetodoEnvio{
+    text-align: center;
+    background-color: rgb(231, 231, 231);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-right: 30px;
+    border: 1px;
+    border-color: black;
+    border-radius: 1px;
+    border-style: groove;
+}
+
+#Pedido1{
+    background-color: rgb(231, 231, 231);
+    margin-right: 5%;
+    font-size: 18px;
+    float: left;
+    padding-left: 50px;
+    padding-right: 20%;
+    padding-top: 10px;
+    padding-bottom: 180px;
+    border: 1px;
+    border-color: black;
+    border-radius: 1px;
+    border-style: groove;
+
+}
+
+#Resumen1{
+    padding-top: 10px;
+    text-align: left;
+    background-color: rgb(231, 231, 231);    
+    font-size: 18px;
+    margin-left: 50%;
+    margin-right: 30px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+    margin-bottom: 15px;
+    border: 1px;
+    border-color: black;
+    border-radius: 1px;
+    border-style: groove;
+}
+
+#ProductoPedido1{
+    font-size: 18px;
+    text-align: right;
+    margin-right: 0px;
+}
+
+#ResumenPedido1{
+    font-size: 18px;
+    text-align: center;
+}
+
+#OrdenButton{
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    background-color: black;
+    padding:15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 5px;
+}
+
+#Orden1{
+    text-align: center;
+    margin-top: 10px;
+}

@@ -1,0 +1,195 @@
+h3{
+    color: black;
+    padding-left: 21px;
+  }
+  .titulos{
+    width: 1106px;
+    height: 45px;
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .buscador{
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 10px;
+    height: 45px;
+    width: 1106px;
+    background-color: #FFFFFF;
+    color: black;
+    padding-left: 21px;
+  }
+  p.textoholder{
+    color: gray;
+    
+  }
+  .resultados{
+    background-color: #FFFFFF;
+    height: 444px;
+    width: 1106px;
+  
+  }
+  table {
+    width: 100%;
+  }
+  table tr td {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  td,
+  th {
+    padding: 5px;
+    text-align: center;
+  }
+  td:nth-child(2) {
+    width: 20% !important;
+  }
+  #page-no-dropdown {
+    width: fit-content;
+    border: 1px solid black;
+    padding: 2px;
+  }
+  select:focus-visible {
+    outline: none;
+    border: none;
+  }
+  button {
+    border: 1px solid black;
+    padding: 2px;
+  }
+  /*
+  input{
+    background-color: #FFFFFF;
+    border: none;
+    color: grey;
+    font-family: sans-serif;
+    font-size: 16px;
+    width: 1080px;
+    height: 40px;
+  }
+  */
+  h4{
+    color: black;
+    font-weight: normal;
+    padding-left: 21px;
+  }
+  .wrapper{
+    color: white;
+  }
+  .input-box input{
+    background-color: white;
+    border-radius: 5px;
+    height: 64px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 360px;
+    border: 1px solid #000000;
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .wrapper button{
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    width:360px;
+    height:64px;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  ::placeholder{
+      font-size: large;
+      color: #00000080;
+      font-family: "Roboto", sans-serif;
+  }
+  
+  .ag_serie{
+    display: flex;
+    flex-direction: row;
+  
+  }
+  .ag_imagen{
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 10px;
+    height: 334px;
+    width: 416px;
+    background-color: #FFFFFF;
+    color: black;
+    padding-left: 21px;
+    padding-top: 45px;
+  }
+  .ag_imagen_button{
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 10px;
+    height: 48px;
+    width: 200px;
+    background-color: #FFFFFF;
+    color: black;
+    padding-left: 21px;
+    padding-top: 45px;
+  }
+  .ag_nombre{
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 10px;
+    height: 36px;
+    width: 642px;
+    background-color: #FFFFFF;
+    color: black;
+    padding-left: 21px;
+  }
+  
+  .ag_descripcion{
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 10px;
+    height: 68px;
+    width: 642px;
+    background-color: #FFFFFF;
+    color: black;
+    padding-left: 21px;
+  }
+  
+  .ag_p_serie{
+    width: 642px;
+    height: 45px;
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .resultados{
+    background-color: #FFFFFF;
+    height: 248px;
+    width: 642px;
+  
+  }
+  .orden{
+    display: flex;
+    flex-direction: row;
+  
+  }
+  
+  .cuadros{
+    height: 559px;
+    width: 658px;
+    background-color: #FFFFFF;
+    flex-shrink: 0;
+  }
+  .rectangulo{
+    height: 559px;
+    width: 658px;
+    background-color: #FFFFFF;
+    flex-shrink: 0;
+  }

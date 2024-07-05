@@ -1,0 +1,535 @@
+[
+    {
+        "id": 1,
+        "nombre": "Antonio",
+        "apellido": "Lopez Caro",
+        "correo": "correo@sanchez.com",
+        "contraseña": "123",
+        "fecha_registro": "11/02/2022",
+        "estado": "Activo",
+        "tipo" : 2,
+        "ordenes": [
+            {
+                "id": 1,
+                "fecha_orden": "2024-05-28",
+                "total": 3500.00,
+                "productos": 3,
+                "estado": "Completada"
+            },
+            {
+                "id": 2,
+                "fecha_orden": "2024-05-27",
+                "total": 1500.00,
+                "productos": 1,
+                "estado": "En proceso"
+            }
+        ]
+    },
+    {
+        "id": 12334,
+        "nombre": "Ana",
+        "apellido": "Sanchez",
+        "correo": "anila123@hotmail.com",
+        "contraseña": "123",
+        "fecha_registro": "11/02/2022",
+        "estado": "Inactivo",
+        "tipo" : 1,
+        "ordenes": [
+            {
+                "id": 22,
+                "fecha_orden": "2023-02-27",
+                "total": 2500.00,
+                "productos": 2,
+                "estado": "Completada"
+            },
+            {
+                "id": 23,
+                "fecha_orden": "2023-02-28",
+                "total": 1000.00,
+                "productos": 2,
+                "estado": "Completada"
+            },
+            {
+                "id": 24,
+                "fecha_orden": "2023-03-01",
+                "total": 1500.00,
+                "productos": 3,
+                "estado": "En proceso"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "nombre": "Antonio",
+        "apellido": "Lopez Caro",
+        "correo": "correo@sanchez.com",
+        "contraseña": "123",
+        "fecha_registro": "11/02/2022",
+        "estado": "Activo",
+        "tipo" : 1,
+        "ordenes": [
+            {
+                "id": 25,
+                "fecha_orden": "2024-05-29",
+                "total": 3000.00,
+                "productos": 4,
+                "estado": "En proceso"
+            },
+            {
+                "id": 26,
+                "fecha_orden": "2024-05-30",
+                "total": 2000.00,
+                "productos": 2,
+                "estado": "Completada"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "nombre": "Maria",
+        "apellido": "Perez",
+        "correo": "maria.perez@example.com",
+        "contraseña": "123",
+        "fecha_registro": "12/03/2022",
+        "estado": "Activo",
+        "tipo" : 1,
+        "ordenes": [
+            {
+                "id": 27,
+                "fecha_orden": "2024-05-31",
+                "total": 1800.00,
+                "productos": 2,
+                "estado": "En proceso"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "nombre": "Carlos",
+        "apellido": "Garcia",
+        "correo": "carlos.garcia@example.com",
+        "contraseña": "123",
+        "fecha_registro": "15/04/2022",
+        "estado": "Inactivo",
+        "tipo" : 1,
+        "ordenes": [
+            {
+                "id": 28,
+                "fecha_orden": "2024-05-25",
+                "total": 2700.00,
+                "productos": 3,
+                "estado": "Completada"
+            },
+            {
+                "id": 228,
+                "fecha_orden": "2024-05-19",
+                "total": 5000.00,
+                "productos": 3,
+                "estado": "Completada"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "nombre": "Luis",
+        "apellido": "Martinez",
+        "correo": "luis.martinez@example.com",
+        "contraseña": "123",
+        "fecha_registro": "20/05/2022",
+        "estado": "Activo",
+        "tipo" : 1,
+        "ordenes": [
+            {
+                "id": 29,
+                "fecha_orden": "2024-05-15",
+                "total": 2100.00,
+                "productos": 1,
+                "estado": "En proceso"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "nombre": "Laura",
+        "apellido": "Gonzalez",
+        "correo": "laura.gonzalez@example.com",
+        "contraseña": "123",
+        "fecha_registro": "25/06/2022",
+        "estado": "Inactivo",
+        "tipo" : 1,
+        "ordenes": [
+            {
+                "id": 30,
+                "fecha_orden": "2024-05-20",
+                "total": 1900.00,
+                "productos": 2,
+                "estado": "Completada"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "nombre": "Miguel",
+        "apellido": "Hernandez",
+        "correo": "miguel.hernandez@example.com",
+        "contraseña": "123",
+        "fecha_registro": "30/07/2022",
+        "estado": "Activo",
+        "tipo" : 1,
+        "ordenes": [
+            {
+                "id": 31,
+                "fecha_orden": "2024-05-18",
+                "total": 2200.00,
+                "productos": 3,
+                "estado": "En proceso"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "nombre": "Sara",
+        "apellido": "Lopez",
+        "correo": "sara.lopez@example.com",
+        "contraseña": "123",
+        "fecha_registro": "05/08/2022",
+        "estado": "Inactivo",
+        "tipo" : 1,
+        "ordenes": [
+            {
+                "id": 32,
+                "fecha_orden": "2024-05-22",
+                "total": 2500.00,
+                "productos": 2,
+                "estado": "Completada"
+            },
+            {
+                "id": 332,
+                "fecha_orden": "2024-05-23",
+                "total": 4500.00,
+                "productos": 3,
+                "estado": "En proceso"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "nombre": "Jorge",
+        "apellido": "Gomez",
+        "correo": "jorge.gomez@example.com",
+        "contraseña": "123",
+        "fecha_registro": "10/09/2022",
+        "estado": "Activo",
+        "tipo" : 1,
+        "ordenes": [
+            {
+                "id": 33,
+                "fecha_orden": "2024-05-23",
+                "total": 2600.00,
+                "productos": 4,
+                "estado": "En proceso"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "nombre": "Elena",
+        "apellido": "Diaz",
+        "correo": "elena.diaz@example.com",
+        "contraseña": "123",
+        "fecha_registro": "15/10/2022",
+        "estado": "Inactivo",
+        "tipo" : 1,
+        "ordenes": [
+            {
+                "id": 34,
+                "fecha_orden": "2024-05-24",
+                "total": 2800.00,
+                "productos": 2,
+                "estado": "Completada"
+            },
+            {
+                "id": 344,
+                "fecha_orden": "2024-05-25",
+                "total": 2700.00,
+                "productos": 3,
+                "estado": "En proceso"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "nombre": "David",
+        "apellido": "Ruiz",
+        "correo": "david.ruiz@example.com",
+        "contraseña": "123",
+        "fecha_registro": "20/11/2022",
+        "estado": "Activo",
+        "tipo" : 1,
+        "ordenes": [
+            {
+                "id": 35,
+                "fecha_orden": "2024-05-26",
+                "total": 3100.00,
+                "productos": 1,
+                "estado": "En proceso"
+            },
+            {
+                "id": 355,
+                "fecha_orden": "2024-05-27",
+                "total": 4200.00,
+                "productos": 2,
+                "estado": "En proceso"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "nombre": "Laura",
+        "apellido": "Vargas",
+        "correo": "laura.vargas@example.com",
+        "contraseña": "123",
+        "fecha_registro": "25/12/2022",
+        "estado": "Inactivo",
+        "tipo" : 1,
+        "ordenes": [
+            {
+                "id": 36,
+                "fecha_orden": "2024-05-27",
+                "total": 2300.00,
+                "productos": 3,
+                "estado": "Completada"
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "nombre": "Pedro",
+        "apellido": "Ramos",
+        "correo": "pedro.ramos@example.com",
+        "contraseña": "123",
+        "fecha_registro": "30/01/2023",
+        "estado": "Activo",
+        "tipo" : 1,
+        "ordenes": [
+            {
+                "id": 37,
+                "fecha_orden": "2024-05-28",
+                "total": 2400.00,
+                "productos": 4,
+                "estado": "En proceso"
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "nombre": "Carmen",
+        "apellido": "Romero",
+        "correo": "carmen.romero@example.com",
+        "contraseña": "123",
+        "fecha_registro": "05/02/2023",
+        "estado": "Inactivo",
+        "tipo" : 1,
+        "ordenes": [
+            {
+                "id": 38,
+                "fecha_orden": "2024-05-29",
+                "total": 3500.00,
+                "productos": 2,
+                "estado": "Completada"
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "nombre": "Jose",
+        "apellido": "Moreno",
+        "correo": "jose.moreno@example.com",
+        "contraseña": "123",
+        "fecha_registro": "10/03/2023",
+        "estado": "Activo",
+        "tipo" : 1,
+        "ordenes": [
+            {
+                "id": 39,
+                "fecha_orden": "2024-05-30",
+                "total": 2700.00,
+                "productos": 2,
+                "estado": "Completada"
+            },
+            {
+                "id": 339,
+                "fecha_orden": "2024-05-30",
+                "total": 3700.00,
+                "productos": 1,
+                "estado": "En proceso"
+            },
+            {
+                "id": 399,
+                "fecha_orden": "2024-06-01",
+                "total": 1500.00,
+                "productos": 2,
+                "estado": "En proceso"
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "nombre": "Ana",
+        "apellido": "Jimenez",
+        "correo": "ana.jimenez@example.com",
+        "contraseña": "123",
+        "fecha_registro": "15/04/2023",
+        "estado": "Inactivo",
+        "tipo" : 1,
+        "ordenes": [
+            {
+                "id": 40,
+                "fecha_orden": "2024-05-31",
+                "total": 2800.00,
+                "productos": 3,
+                "estado": "Completada"
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "nombre": "Pablo",
+        "apellido": "Fernandez",
+        "correo": "pablo.fernandez@example.com",
+        "contraseña": "123",
+        "fecha_registro": "20/05/2023",
+        "estado": "Activo",
+        "tipo" : 1,
+        "ordenes": [
+            {
+                "id": 41,
+                "fecha_orden": "2024-06-01",
+                "total": 3200.00,
+                "productos": 2,
+                "estado": "En proceso"
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "nombre": "Marta",
+        "apellido": "Gimenez",
+        "correo": "marta.gimenez@example.com",
+        "contraseña": "123",
+        "fecha_registro": "25/06/2023",
+        "estado": "Inactivo",
+        "tipo" : 1,
+        "ordenes": [
+            {
+                "id": 42,
+                "fecha_orden": "2024-06-02",
+                "total": 3700.00,
+                "productos": 2,
+                "estado": "Completada"
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "nombre": "Javier",
+        "apellido": "Blanco",
+        "correo": "javier.blanco@example.com",
+        "contraseña": "123",
+        "fecha_registro": "30/07/2023",
+        "estado": "Activo",
+        "tipo" : 1,
+        "ordenes": [
+            {
+                "id": 43,
+                "fecha_orden": "2024-06-03",
+                "total": 3500.00,
+                "productos": 3,
+                "estado": "En proceso"
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "nombre": "Patricia",
+        "apellido": "Navarro",
+        "correo": "patricia.navarro@example.com",
+        "contraseña": "123",
+        "fecha_registro": "05/08/2023",
+        "estado": "Inactivo",
+        "tipo" : 1,
+        "ordenes": [
+            {
+                "id": 44,
+                "fecha_orden": "2024-06-04",
+                "total": 3000.00,
+                "productos": 2,
+                "estado": "Completada"
+            },
+            {
+                "id": 444,
+                "fecha_orden": "2024-06-05",
+                "total": 3700.00,
+                "productos": 2,
+                "estado": "En proceso"
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "nombre": "Rafael",
+        "apellido": "Martinez",
+        "correo": "rafael.martinez@example.com",
+        "contraseña": "123",
+        "fecha_registro": "10/09/2023",
+        "estado": "Activo",
+        "tipo" : 1,
+        "ordenes": [
+            {
+                "id": 45,
+                "fecha_orden": "2024-06-05",
+                "total": 7800.00,
+                "productos": 4,
+                "estado": "En proceso"
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "nombre": "Isabel",
+        "apellido": "Ortiz",
+        "correo": "isabel.ortiz@example.com",
+        "contraseña": "123",
+        "fecha_registro": "15/10/2023",
+        "estado": "Inactivo",
+        "tipo" : 1,
+        "ordenes": [
+            {
+                "id": 46,
+                "fecha_orden": "2024-06-06",
+                "total": 3100.00,
+                "productos": 3,
+                "estado": "Completada"
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "nombre": "Carlos",
+        "apellido": "Suarez",
+        "correo": "carlos.suarez@example.com",
+        "contraseña": "123",
+        "fecha_registro": "20/11/2023",
+        "estado": "Activo",
+        "tipo" : 1,
+        "ordenes": [
+            {
+                "id": 47,
+                "fecha_orden": "2024-06-07",
+                "total": 2600.00,
+                "productos": 2,
+                "estado": "En proceso"
+            }
+        ]
+    }
+]
