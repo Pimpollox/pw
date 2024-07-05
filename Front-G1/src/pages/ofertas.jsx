@@ -1,29 +1,36 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useContext } from 'react';
 import ProductCard from './ProductCard';
-import productData from '../../public/data/relojes.json';
-
 import HeaderPrincipal from '../componentes/HeaderPrincipal';
 import FooterPrincipal from '../componentes/FooterPrincipal';
+import { ModelosContext } from '../modelosContext';
+import { MarcaContext } from '../marcaContext';
 
 function Ofertas() {
-  // Lógica para obtener los productos en oferta (puedes usar filtros, etc.)
-  const productosEnOferta = productData
-    .flatMap(marca => marca.modelos) // Aplanar el array de modelos
-    .filter(product => product.precio < 500); // Filtrar por precio menor a 500 (ejemplo)
+  const { modelos } = useContext(ModelosContext);
+  const { marcas } = useContext(MarcaContext);
+
+  // Filtrar productos con precio menor a 500
+  const productosEnOferta = modelos.filter((product) => product.precio < 500);
+
+  // Añadir la marca a cada producto
+  const productosConMarcas = productosEnOferta.map((producto) => {
+    const marca = marcas.find((marca) => marca.id === producto.MarcaId);
+    return { ...producto, marca: marca ? marca.nombre : 'Unknown' };
+  });
 
   return (
     <>
-    <HeaderPrincipal />
-    <section className="products">
-      <h2>Ofertas</h2>
-      <div className="products-container" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(250px, 1fr))' }}>
-        {productosEnOferta.map((product) => (
-          <ProductCard key={product.Serie} product={product} />
-        ))}
-      </div>
-    </section>
-    <FooterPrincipal />
+      <HeaderPrincipal />
+      <section className="products">
+        <h2>Ofertas</h2>
+        <div className="products-container" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(250px, 1fr))' }}>
+          {productosConMarcas.map((product) => (
+            <ProductCard key={product.Serie} product={product} />
+          ))}
+        </div>
+      </section>
+      <FooterPrincipal />
     </>
   );
 }
