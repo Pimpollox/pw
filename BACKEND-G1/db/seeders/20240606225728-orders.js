@@ -15,6 +15,9 @@ module.exports = {
       productos: order.productos,
       estado: order.estado,
       direccion: order.direccion,
+      impuesto: order.impuesto,
+      envio: order.envio,
+      subtotal: order.subtotal,
       createdAt: new Date(),
       updatedAt: new Date()
     })), {});
