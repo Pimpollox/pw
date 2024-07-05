@@ -8,8 +8,7 @@ ruta.get('/', async (req, res) => {
 });
 
 ruta.post('/addProd', async (req, res) => {
-  try {
-    const { Serie, imagen, precio, Descripcion, Caracteristicas, stock, estado, MarcaId } = req.body;
+  const { Serie, imagen, precio, Descripcion, Caracteristicas, stock, estado, MarcaId } = req.body;
 
     const nuevoProducto = await db.Modelo.create({
       Serie,
@@ -22,10 +21,19 @@ ruta.post('/addProd', async (req, res) => {
       MarcaId
     });
 
-    res.status(201).json(nuevoProducto);
-  } catch (error) {
-    console.error('Error al agregar producto:', error);
-    res.status(500).json({ error: 'Error al agregar producto', details: error.message });
+  res.status(201).json(nuevoProducto);
+});
+
+ruta.put('/:id/upEstado', async (req, res) => {
+  const modeloId = req.params.id;
+  const modelo = await db.Modelo.findByPk(modeloId);
+
+  if (modelo) {
+    modelo.estado = modelo.estado === 'Activo' ? 'Inactivo' : 'Activo';
+    await modelo.save();
+    res.json({ message: 'Estado del modelo actualizado correctamente', estado: modelo.estado });
+  } else {
+    res.status(404).json({ error: 'Modelo no encontrado' });
   }
 });
 

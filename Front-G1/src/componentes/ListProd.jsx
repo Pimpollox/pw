@@ -11,17 +11,17 @@ function ListProd() {
     const { marcas } = useContext(MarcaContext);
     const { modelos } = useContext(ModelosContext);
     
-    const [relojes, setRelojes] = useState([]); // Estado para almacenar los relojes
-    const [currentPage, setCurrentPage] = useState(1); // Estado para la página actual
-    const [relojesPerPage] = useState(10); // Número de relojes por página
-    const [searchTerm, setSearchTerm] = useState(""); // Estado para la búsqueda
+    const [relojes, setRelojes] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [relojesPerPage] = useState(10);
+    const [searchTerm, setSearchTerm] = useState("");
 
     useEffect(() => {
         if (marcas.length && modelos.length) {
             const relojesConIdModelo = modelos.flatMap(modelo => {
                 const marca = marcas.find(marca => marca.id === modelo.MarcaId);
                 return {
-                    id: marca ? marca.id : 'null',
+                    id: modelo.id,
                     Serie: modelo.Serie,
                     marca: marca ? marca.nombre : 'null',
                     precio: modelo.precio,
@@ -33,20 +33,25 @@ function ListProd() {
         }
     }, [marcas, modelos]);
 
-    // Función para cambiar estado
-    const handleDesactivar = (serie) => {
-        const updatedRelojes = relojes.map(reloj => {
-            if (reloj.Serie === serie) {
-                // Cambiar el estado entre "Activo" e "Inactivo"
-                const nuevoEstado = reloj.estado === "Activo" ? "Inactivo" : "Activo";
-                return { ...reloj, estado: nuevoEstado };
-            }
-            return reloj;
+    const handleDesactivar = async (id) => {
+        const response = await fetch(`http://localhost:3080/api/modelos/${id}/upEstado`, {
+            method: 'PUT'
         });
-        setRelojes(updatedRelojes);
+
+        if (response.ok) {
+            const updatedEstado = await response.json();
+            const updatedRelojes = relojes.map(reloj => {
+                if (reloj.id === id) {
+                    return { ...reloj, estado: updatedEstado.estado };
+                }
+                    return reloj;
+            });
+            setRelojes(updatedRelojes);
+        } else {
+            console.error('Error al actualizar el estado del modelo');
+        }
     };
 
-    // Lógica para la búsqueda
     const filteredRelojes = relojes.filter(reloj =>
         reloj.marca.toLowerCase().includes(searchTerm.toLowerCase()) ||
         reloj.Serie.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -104,7 +109,7 @@ function ListProd() {
                             </thead>
                             <tbody>
                                 {currentFilteredRelojes.map(reloj => (
-                                    <tr key={reloj.Serie}>
+                                    <tr key={reloj.id}>
                                         <td>{reloj.id}</td>
                                         <td>{reloj.marca}</td>
                                         <td>{reloj.Serie}</td>
@@ -112,11 +117,9 @@ function ListProd() {
                                         <td>{reloj.stock}</td>
                                         <td>{reloj.estado}</td>
                                         <td>
-                                            {reloj.estado === "Activo" ? (
-                                                <button className="list-desc" onClick={() => handleDesactivar(reloj.Serie)}>Desactivar</button>
-                                            ) : (
-                                                "Inactivo"
-                                            )}
+                                            <button className="list-desc" onClick={() => handleDesactivar(reloj.id)}>
+                                                {reloj.estado === "Activo" ? "Desactivar" : "Activar"}
+                                            </button>
                                         </td>
                                     </tr>
                                 ))}
