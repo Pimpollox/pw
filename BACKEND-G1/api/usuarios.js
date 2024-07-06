@@ -11,6 +11,17 @@ ruta.post('/newUser', async (req, res) => {
   try {
     const { nombre, apellido, correo, contraseña, estado, fecha_registro, tipo } = req.body;
 
+    // Validar data
+    if (!nombre || !apellido || !correo || !contraseña) {
+      return res.status(400).json({ error: 'Todos los campos son obligatorios' });
+    }
+
+    // Consultar si existe el usuario
+    const existingUser = await db.User.findOne({ where: { correo } });
+    if (existingUser) {
+      return res.status(400).json({ error: 'El correo ya está registrado' });
+    }
+
     // Consultar el último id registrado
     const lastUser = await db.User.findOne({
       order: [['id', 'DESC']], // Ordenar por id descendente para obtener el último registrado
