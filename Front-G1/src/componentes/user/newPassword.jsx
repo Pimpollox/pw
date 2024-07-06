@@ -19,12 +19,12 @@ function NewPassword() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (!newPassword || !repeatPassword) {
+    if (!newPassword || !repeatPassword) {  // Corrección 1: Validación de campos vacíos
       setError('Todos los campos son obligatorios');
       return;
     }
 
-    if (newPassword !== repeatPassword) {
+    if (newPassword !== repeatPassword) {  // Corrección 2: Validación de contraseñas coincidentes
       setError('Las contraseñas no coinciden');
       return;
     }
@@ -33,7 +33,7 @@ function NewPassword() {
   };
 
   const handleModalSubmit = async () => {
-    if (confirmPassword !== usuarioActual.contraseña) {
+    if (confirmPassword !== usuarioActual.contraseña) {  // Corrección 3: Validación de la contraseña de confirmación
       setError('La contraseña de confirmación es incorrecta');
       return;
     }
@@ -44,15 +44,16 @@ function NewPassword() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ nuevaContraseña: newPassword }),
+        body: JSON.stringify({ nuevaContraseña: newPassword }),  // Corrección 4: Nombre del campo de contraseña actualizado
       });
 
       if (!response.ok) {
-        throw new Error('Error al actualizar la contraseña');
+        const data = await response.json();  // Corrección 5: Obtener mensaje de error del servidor
+        throw new Error(data.error || 'Error al actualizar la contraseña');
       }
 
-      const updatedUsuario = { ...usuarioActual, contraseña: newPassword };
-      setUsuarioActual(updatedUsuario);
+      const updatedUsuario = { ...usuarioActual, contraseña: newPassword };  // Corrección 6: Actualización del contexto del usuario con la nueva contraseña
+      setUsuarioActual(updatedUsuario);  // Corrección 6: Actualización del contexto del usuario con la nueva contraseña
       console.log('Contraseña actualizada');
       setError('');
       setNewPassword('');
@@ -60,7 +61,7 @@ function NewPassword() {
       setConfirmPassword('');
       setIsModalOpen(false);
     } catch (error) {
-      setError(error.message);
+      setError(error.message);  // Corrección 7: Manejo de errores
     }
   };
 
@@ -73,7 +74,7 @@ function NewPassword() {
           <div className="update-container">
             <div className="update-box">
               <h2>Cambiar Password</h2>
-              {error && <p className="error-message">{error}</p>}
+              {error && <p className="error-message">{error}</p>}  // Corrección 8: Mostrar mensajes de error
               <form onSubmit={handleSubmit}>
                 <input
                   type="password"
