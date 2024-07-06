@@ -33,6 +33,7 @@ import PedidoCompletado from "./pages/PedidoCompletado"
 
 import Ordenes from './pages/ordenes'
 /////////////////////////////////////////////////////////////
+import detallesOrd from './pages/detallesOrd'
 
 
 function App() {
@@ -67,6 +68,7 @@ function App() {
         <Route path="/addseries" element= {<AgregarSerie />} />
         <Route path="/ordAdmin" element= {<OrdenesAdmin />} />
         <Route path="/ordAdmin/:usuario" element={<UserOrd />} />
+        <Route path="/detallesOrd/:id" element={<detallesOrd />} />
         
       </Routes>
     </div>
