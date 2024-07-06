@@ -13,6 +13,10 @@ function CheckOut() {
   const { usuarioActual } = useContext(UsuarioContext);
   const { crearOrden } = useContext(OrdenContext);
   const { modelos } = useContext(ModelosContext);
+  const [isQrSelected, setIsQrSelected] = useState(false);
+  const handlePagoChange = (event) => {
+    setIsQrSelected(event.target.value === 'opcion1');
+  };
   const [envio, setEnvio] = useState(0.00);
   const [direccionEnvio, setDireccionEnvio] = useState({
     linea1: '',
@@ -80,8 +84,10 @@ function CheckOut() {
     } catch (error) {
       console.error('Error al completar la orden:', error);
     }
+    
   };
 
+  
   return (
     <>
       <HeaderPrincipal />
@@ -101,15 +107,21 @@ function CheckOut() {
           <p><input type="text" name="pais" className="inputTexto" placeholder="País" onChange={handleInputChange} /></p>
         </div>
         <div id="Pago">
-          <div id="FormaPago">
-            <p><b>Pago</b></p>
-            <p>
-              <input type="radio" id="Opcion1" name="opcion1" value="opcion1" />
-              <label htmlFor="Opcion1">Pago con código QR</label><br /><br />
-              <input type="radio" id="Opcion1" name="opcion1" value="opcion1" />
-              <label htmlFor="Opcion1">Pago con tarjeta de crédito</label>
-            </p>
+        <div id="FormaPago">
+          <p><b>Pago</b></p>
+          <p>
+            <input type="radio" id="OpcionQR" name="formaPago" value="opcion1" onChange={handlePagoChange} />
+            <label htmlFor="OpcionQR">Pago con código QR</label><br /><br />
+            <input type="radio" id="OpcionTarjeta" name="formaPago" value="opcion2" onChange={handlePagoChange} />
+            <label htmlFor="OpcionTarjeta">Pago con tarjeta de crédito</label>
+          </p>
+        </div>
+        {isQrSelected && (
+          <div id="QRCode">
+            <img src="RUTAQR" alt="Código QR de Pago" />
           </div>
+        )}
+      </div>
           <div id="NumTarjeta">
             <p><input type="text" className="inputTexto" placeholder="Número de Tarjeta" /></p>
             <p><input type="text" className="inputTexto" placeholder="Nombre en Tarjeta" /></p>
@@ -125,7 +137,7 @@ function CheckOut() {
         <div id="MetodoEnvio">
           <input type="radio" id="Opcion2" name="opcion2" value="10.00" onChange={handleEnvioChange} />
           <label htmlFor="Opcion2">Económico Aéreo - S/ 10.00</label>
-          <input type="radio" id="Opcion2" name="opcion2" value="17.00" onChange={handleEnvioChange} /*defaultChecked*/ />
+          <input type="radio" id="Opcion2" name="opcion2" value="17.00" onChange={handleEnvioChange} />
           <label htmlFor="Opcion2">Envío prioritario (5 a 10 días) - S/ 17.00</label>
         </div>
         <div id="Pedido">
@@ -152,10 +164,10 @@ function CheckOut() {
           <Link to="/"><button className="botonCancelar">Cancelar</button></Link>
           <button className="botonCompletar" onClick={handleCompleteOrder}>Completar Orden</button>
         </div>
-      </div>
       <FooterPrincipal />
     </>
   );
 }
 
 export default CheckOut;
+
