@@ -19,21 +19,19 @@ hechas:
 - Series.jsx
 
 --------------------------------------------------------------------------
-user:
-funciona todo menos updateDatos y newPassword
+
 --------------------------------------------------------------------------
 
 mejorar:
 - headerPrincipal
 mejorar el despliegue del boton "cuenta"
+(que no salga en medio de la pantalla xd)
 
+- checkout y ordContext:
+eliminar el llamado de la api newOrder en ordContext y ponerla en checkout directamente.
 
 no funciona:
 
-- api usuarios '/newUser'
-registrar data en bd
-
-- userRegister.jsx
 -----------------------------------------------------------------------------------------
 PRINCIPAL:
 CartContext: Proporciona un contexto para manejar el carrito de compras. Permite agregar, eliminar y actualizar la cantidad de productos en el carrito.

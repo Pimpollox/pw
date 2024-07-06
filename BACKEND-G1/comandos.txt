@@ -1,0 +1,48 @@
+iniciar backend:
+- cd C:\pgsql\bin (ruta)
+
+- initdb -U postgres -A password -E utf8 -W -D "ruta\BD\DATA"
+- pg_ctl -D "D:\USUARIO 10-03-22\Desktop\Pw\BD\DATA" -l "ruta\BD\LOG\log.txt" start
+
+- psql -U postgres
+---------------------------------------------------------------------------------------------
+navegar en backend:
+\l : muestre las db
+\c database : ingresa a la db
+
+dentro de db..
+\dt : ver tablas
+\q : desconectarse
+
+comandos para interactuar tablas:
+select * from "tabla"; -> muestra la data de la tabla
+
+DELETE FROM tabla WHERE id = x;
+
+
+CREATE DATABASE 'nombre';
+DROP DATABASE 'nombre';
+
+CREATE TABLE "nombre";
+DROP TABLE "nombre"; - borrar tabla
+TRUNCATE TABLE "nombre"; - vaciar data
+---------------------------------------------------------------------------------------------
+hacer migraciones:
+npx sequelize db:create
+npx sequelize-cli migration:create --name table
+
+migrar las tablas a db:
+npx sequelize db:migrate
+npx sequelize-cli db:migrate --name NombreDeLaMigration
+
+npx sequelize-cli db:migrate:status
+
+seeders:
+npx sequelize seed:generate --name user
+npx sequelize seed:generate --name orders
+
+npx sequelize seed:generate --name marca
+npx sequelize seed:generate --name modelo
+
+npx sequelize db:seed:all
+npx sequelize-cli db:seed --seed nombre 
