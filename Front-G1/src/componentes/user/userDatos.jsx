@@ -31,16 +31,16 @@ function UserDatos() {
       });
 
       if (!response.ok) {
-        throw new Error('Error al actualizar el usuario');
+        const data = await response.json();  
+        throw new Error(data.error || 'Error al actualizar el usuario'); 
       }
 
       const data = await response.json();
-
-      setUsuarioActual(data.usuario);
+      setUsuarioActual(data); 
       setMensaje('Datos actualizados correctamente');
       setError('');
     } catch (error) {
-      setError(error.message);
+      setError(error.message); 
       setMensaje('');
     }
   };
@@ -54,8 +54,8 @@ function UserDatos() {
           <div className="update-container">
             <div className="update-box">
               <h2>Datos de Registro</h2>
-              {error && <p className="error-message">{error}</p>}
-              {mensaje && <p className="success-message">{mensaje}</p>}
+              {error && <p className="error-message">{error}</p>} 
+              {mensaje && <p className="success-message">{mensaje}</p>} 
               <form onSubmit={handleSubmit}>
                 <input
                   type="text"
