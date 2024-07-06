@@ -9,6 +9,8 @@ function AgregarSerie() {
     const { marcas, agregarMarca } = useContext(MarcaContext);
     const [nombre, setNombre] = useState('');
     const [imagen, setImagen] = useState('');
+    const [productosEnSerie, setProductosEnSerie] = useState([]);
+    const [mostrarAgregarProducto, setMostrarAgregarProducto] = useState(false);
     const fileInputRef = useRef(null);
 
     const handleImageChange = (event) => {
@@ -31,12 +33,21 @@ function AgregarSerie() {
         setNombre(value);
     };
 
+    const agregarProducto = (producto) => {
+        setProductosEnSerie([...productosEnSerie, producto]);
+    };
+
+    const toggleAgregarProducto = () => {
+        setMostrarAgregarProducto(!mostrarAgregarProducto);
+    };
+    
     const handleSubmit = async (event) => {
         event.preventDefault();
         const nuevaMarca = {
             nombre: nombre,
-            fecha_creacion: new Date().toISOString(),
-          };
+            imagen: imagen,
+            productos: productosEnSerie,
+        };
 
         try {
             const response = await fetch('http://localhost:3080/api/marcas/newMarca', {
@@ -47,7 +58,8 @@ function AgregarSerie() {
                 body: JSON.stringify(nuevaMarca),
             });
             if (response.ok) {
-                alert("exito")
+                agregarMarca(nuevaMarca);
+                alert('Marca creada exitosamente');
             } else {
                 alert('Error al crear la marca');
             }
@@ -99,6 +111,19 @@ function AgregarSerie() {
                                         required
                                     />
                                 </p>
+                                <div>
+                                    <h3>Productos en la serie</h3>
+                                    <button onClick={toggleAgregarProducto}>+</button>
+                                    {productosEnSerie.map((producto, index) => (
+                                        <div key={index}>{producto.nombre}</div>
+                                    ))}
+                                    {mostrarAgregarProducto && (
+                                        <div>
+                                            {/* aqui iría la logica para agregar un nuevo producto */}
+                                            <button onClick={() => agregarProducto({ nombre: 'Nuevo Producto' })}>Agregar Producto</button>
+                                        </div>
+                                    )}
+                                </div>
                                 <div>
                                     <input id="save" type="submit" value="Guardar" />
                                 </div>
