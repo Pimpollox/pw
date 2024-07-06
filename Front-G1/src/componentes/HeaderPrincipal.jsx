@@ -58,33 +58,35 @@ function Header({ onSearch }) {
           </ul>
         </nav>
         <SearchBar searchTerm={searchTerm} onSearchChange={handleSearchChange} />
-        <button onClick={() => setModalIsOpen(true)}>Cuenta</button>
-        {modalIsOpen && (
-          <div style={{
-            position: 'absolute',
-            top: '100%',
-            left: '0',
-            width: '300px',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-            background: 'white',
-            boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
-            padding: '20px',
-            zIndex: 100,
-          }}>
-            <h2>Opciones de Cuenta</h2>
-            {usuarioActual ? (
-              <>
-                <button onClick={handleViewProfile}>Ver Perfil</button>
-                <button onClick={handleLogout}>Cerrar Sesión</button>
-              </>
-            ) : (
-              <button onClick={handleLogin}>Iniciar Sesión</button>
-            )}
-          </div>
-        )}
+        <div style={{ position: 'relative', display: 'inline-block', float: 'right' }}> {/* Contenedor para el botón y el div de opciones */}
+          <button onClick={() => setModalIsOpen(true)}>Cuenta</button>
+          {modalIsOpen && (
+            <div style={{
+              position: 'absolute',
+              top: '100%',
+              right: '0',
+              width: '300px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              background: 'white',
+              boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
+              padding: '20px',
+              zIndex: 100,
+            }}>
+              <h2>Opciones de Cuenta</h2>
+              {usuarioActual ? (
+                <>
+                  <button onClick={handleViewProfile}>Ver Perfil</button>
+                  <button onClick={handleLogout}>Cerrar Sesión</button>
+                </>
+              ) : (
+                <button onClick={handleLogin}>Iniciar Sesión</button>
+              )}
+            </div>
+          )}
+        </div>
       </div>
     </header>
   );
