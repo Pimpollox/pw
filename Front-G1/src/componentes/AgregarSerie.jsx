@@ -138,3 +138,25 @@ function AgregarSerie() {
 }
 
 export default AgregarSerie;
+
+// const agregarProducto = async (producto) => {
+//   try {
+//     const response = await fetch('apiproductoxmarca', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify(producto),
+//     });
+
+//     if (!response.ok) {
+//       throw new Error('Error al agregar producto');
+//     }
+
+//     const productoAgregado = await response.json();
+//     // actualizar
+//     setProductosEnSerie(productosEnSerie.concat(productoAgregado));
+//   } catch (error) {
+//     console.error('Error al agregar producto:', error);
+//   }
+// };
