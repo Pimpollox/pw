@@ -25,7 +25,7 @@ ProductCard.propTypes = {
   product: PropTypes.shape({
     imagen: PropTypes.string.isRequired,
     Serie: PropTypes.string.isRequired,
-    precio: PropTypes.string.isRequired, // cambiar a number si es necesario
+    precio: PropTypes.number.isRequired,
   }).isRequired,
   brand: PropTypes.string.isRequired
 };
