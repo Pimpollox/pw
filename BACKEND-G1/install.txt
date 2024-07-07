@@ -1,1 +1,1 @@
-npm install body-parse cors dotenv-cli express nodemon pg pg-hstore sequelize sequelize-cli
+npm install body-parser cors dotenv-cli express nodemon pg pg-hstore sequelize sequelize-cli
