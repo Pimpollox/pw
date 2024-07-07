@@ -11,7 +11,7 @@ function Ofertas() {
   const { marcas } = useContext(MarcaContext);
 
   // Filtrar productos con precio menor a 500
-  const productosEnOferta = modelos.filter((product) => product.precio < 500);
+  const productosEnOferta = modelos.filter((product) => product.precio < 500 && product.estado === "Activo");
 
   // Añadir la marca a cada producto
   const productosConMarcas = productosEnOferta.map((producto) => {

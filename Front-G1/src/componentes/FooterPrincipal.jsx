@@ -17,12 +17,10 @@ function Footer() {
             <li>
               <Link to="/preguntas-frecuentes">Preguntas Frecuentes</Link>
             </li>
-            {/* Agrega más enlaces según tus necesidades */}
           </ul>
         </div>
         <div className="footer-info">
           <p>&copy; {new Date().getFullYear()} La Tiendita del Abuelo. Todos los derechos reservados.</p>
-          {/* Agregar aquí información adicional como redes sociales, dirección, etc. */}
         </div>
       </div>
     </footer>

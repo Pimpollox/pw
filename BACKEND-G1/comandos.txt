@@ -18,7 +18,7 @@ comandos para interactuar tablas:
 select * from "tabla"; -> muestra la data de la tabla
 
 DELETE FROM tabla WHERE id = x;
-
+UPDATE tabla SET estado = 'Activo' where id = 1;
 
 CREATE DATABASE 'nombre';
 DROP DATABASE 'nombre';

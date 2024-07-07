@@ -25,7 +25,7 @@ const Series = () => {
                     id: marca.id,
                     nombre: marca.nombre,
                     nroProductos: modelosMarca.length,
-                    fecha_creacion: marca.fecha_creacion // Supongo que la fecha de creación pertenece a la marca
+                    fecha_creacion: marca.fecha_creacion
                 };
             });
             setRelojes(relojesData);
@@ -81,7 +81,6 @@ const Series = () => {
                                         <th>Nombre</th>
                                         <th>Nro Productos</th>
                                         <th>Fecha de creación</th>
-                                        <th>Acciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -91,7 +90,6 @@ const Series = () => {
                                             <td>{reloj.nombre}</td>
                                             <td>{reloj.nroProductos}</td>
                                             <td>{format(new Date(reloj.fecha_creacion), 'dd/MM/yyyy')}</td>
-                                            <td>Acciones...</td>
                                         </tr>
                                     ))}
                                 </tbody>

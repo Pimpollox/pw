@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import productData from '../../public/data/relojes.json';
 import ProductCard from './ProductCard';

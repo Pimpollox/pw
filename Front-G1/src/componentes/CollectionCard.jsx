@@ -4,11 +4,12 @@ import './CollectionCard-Style.css';
 
 function CollectionCard({ collection }) {
   const modelo = collection.modelos && collection.modelos[0] ? collection.modelos[0] : null;
+  const imagenUrl = modelo && modelo.imagen ? modelo.imagen : '/data/6d770e1266568c74.png';
 
   return (
     <div className="CollectionCard">
       {modelo ? (
-        <div className="bckg-div" style={{ backgroundImage: `url(${modelo.imagen})` }}>
+        <div className="bckg-div" style={{ backgroundImage: `url(${imagenUrl})` }}>
           <h3>{collection.nombre}</h3>
           <p>Ver más</p>
         </div>

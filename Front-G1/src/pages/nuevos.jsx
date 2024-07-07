@@ -12,7 +12,7 @@ function Nuevos() {
 
   // Obtener el primer modelo de cada marca
   const newProducts = marcas.flatMap((marca) => {
-    const modelosDeMarca = modelos.filter((modelo) => modelo.MarcaId === marca.id);
+    const modelosDeMarca = modelos.filter((modelo) => modelo.MarcaId === marca.id && modelo.estado === "Activo");
     return modelosDeMarca.slice(0, 1);
   });
 
