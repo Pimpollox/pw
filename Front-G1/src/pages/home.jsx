@@ -1,14 +1,15 @@
-/* eslint-disable no-unused-vars */
-import productData from '../../public/data/relojes.json';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import ProductCard from './ProductCard';
 import './Home.css';
 import CollectionCard from '../componentes/CollectionCard';
-
 import HeaderPrincipal from '../componentes/HeaderPrincipal';
 import FooterPrincipal from '../componentes/FooterPrincipal';
+import { ModelosContext } from '../modelosContext';
+import { MarcaContext } from '../marcaContext';
 
 function Home() {
+  const { modelos } = useContext(ModelosContext);
+  const { marcas } = useContext(MarcaContext);
   const [data, setData] = useState({
     featuredCollections: [],
     newCollections: [],
@@ -18,44 +19,42 @@ function Home() {
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
-    const uniqueBrands = [...new Set(productData.map(marca => marca.nombre))];
+    if (modelos.length && marcas.length) {
+      const uniqueBrands = [...new Set(marcas.map(marca => marca.nombre))];
+      
+      const featuredCollections = marcas.slice(0, 3);
+      let featuredProductList = [];
+      featuredCollections.forEach((collection) => {
+        const collectionModels = modelos.filter(model => model.MarcaId === collection.id).slice(0, 4);
+        featuredProductList = [...featuredProductList, ...collectionModels];
+      });
+      featuredProductList = featuredProductList.map((p, index) => ({
+        ...p,
+        marca: uniqueBrands[Math.floor(index / 4)]
+      }));
 
-    const featuredCollections = productData.slice(0, 3);
-    let featuredProductList = featuredCollections.flatMap(modelo => {
-      let list = [];
-      for (let i = 0; i < 4; i++) {
-        list.push(modelo.modelos[i]);
-      }
-      return list;
-    });
-    featuredProductList = featuredProductList.map((p, index) => ({
-      ...p,
-      marca: uniqueBrands[Math.floor(index / 4)]
-    }));
+      const newCollections = marcas.slice(2, 5);
+      let newProductList = [];
+      newCollections.forEach((collection) => {
+        const collectionModels = modelos.filter(model => model.MarcaId === collection.id).slice(0, 2);
+        newProductList = [...newProductList, ...collectionModels];
+      });
+      newProductList = newProductList.map((p, index) => ({
+        ...p,
+        marca: uniqueBrands[2 + Math.floor(index / 2)]
+      }));
 
-    const newCollections = productData.slice(2, 5);
-    let newProductList = newCollections.flatMap(modelo => {
-      let list = [];
-      for (let i = 0; i < 2; i++) {
-        list.push(modelo.modelos[i]);
-      }
-      return list;
-    });
-    newProductList = newProductList.map((p, index) => ({
-      ...p,
-      marca: uniqueBrands[2 + Math.floor(index / 2)]
-    }));
-
-    setData({
-      featuredCollections,
-      newCollections,
-      featuredProducts: featuredProductList,
-      newProducts: newProductList
-    });
-  }, []);
+      setData({
+        featuredCollections,
+        newCollections,
+        featuredProducts: featuredProductList,
+        newProducts: newProductList
+      });
+    }
+  }, [modelos, marcas]);
 
   const handleSearch = (searchTerm) => {
-    const filtered = productData.flatMap(marca => marca.modelos).filter(modelo =>
+    const filtered = modelos.filter(modelo =>
       modelo.Serie.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredProducts(filtered);
