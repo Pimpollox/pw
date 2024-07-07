@@ -37,4 +37,14 @@ ruta.put('/:id/upEstado', async (req, res) => {
   }
 });
 
+ruta.put('/upMarca', async (req,res)=>{
+  const modeloId = req.body.modeloId;
+  const modelo = await db.Modelo.findByPk(modeloId);
+  const marca = req.body.marcaId;
+
+  modelo.MarcaId = marca;
+  await modelo.save();
+  res.json({message: 'Modelo fue agregado a Marca correctamente', Marca: modelo.MarcaId});
+})
+
 module.exports = ruta;
