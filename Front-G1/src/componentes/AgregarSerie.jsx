@@ -10,6 +10,8 @@ function AgregarSerie() {
     const [nombre, setNombre] = useState('');
     const [imagen, setImagen] = useState('');
     const fileInputRef = useRef(null);
+    const [productosEnSerie, setProductosEnSerie] = useState([]);
+    const [mostrarAgregarProducto, setMostrarAgregarProducto] = useState(false);
 
     const handleImageChange = (event) => {
         const file = event.target.files[0];
@@ -29,6 +31,14 @@ function AgregarSerie() {
     const handleInputChange = (event) => {
         const { value } = event.target;
         setNombre(value);
+    };
+    
+    const agregarProducto = (producto) => {
+        setProductosEnSerie([...productosEnSerie, producto]);
+    };
+
+    const toggleAgregarProducto = () => {
+        setMostrarAgregarProducto(!mostrarAgregarProducto);
     };
 
     const handleSubmit = async (event) => {
@@ -103,6 +113,19 @@ function AgregarSerie() {
                                     <input id="save" type="submit" value="Guardar" />
                                 </div>
                             </form>
+                            <div>
+                                    <h3>Productos en la serie</h3>
+                                    <button onClick={toggleAgregarProducto}>+</button>
+                                    {productosEnSerie.map((producto, index) => (
+                                        <div key={index}>{producto.nombre}</div>
+                                    ))}
+                                    {mostrarAgregarProducto && (
+                                        <div>
+                                            {/* aqui iría la logica para agregar un nuevo producto */}
+                                            <button onClick={() => agregarProducto({ nombre: 'Nuevo Producto' })}>Agregar Producto</button>
+                                        </div>
+                                    )}
+                                </div>
                         </div>
                     </div>
                 </div>
