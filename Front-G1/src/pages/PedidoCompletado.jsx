@@ -9,7 +9,7 @@ function PedidoCompletado() {
   const [productosInteres, setProductosInteres] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost/api/modelos')
+    fetch('http://localhost:3080/api/modelos')
       .then(response => response.json())
       .then(data => {
         setProductosInteres(data);
