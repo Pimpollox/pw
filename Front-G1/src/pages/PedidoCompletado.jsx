@@ -32,9 +32,9 @@ function PedidoCompletado() {
           <p>También te podría interesar...</p>
         </div>
         <div className="ProductosI">
-          {productosInteres.map(producto => (
-            <ProductCard key={producto.id} product={producto} brand={producto.marca} />
-          ))}
+          {productosInteres.slice(0, 4).map(producto => (
+    <ProductCard key={producto.id} product={producto} brand={producto.marca} />
+  ))}
         </div>
       </div>
       <FooterPrincipal />
