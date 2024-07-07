@@ -55,4 +55,5 @@ pg_dump -h localhost -p 5432 -U postgres -W nombre > nombre_export.sql
 se guarda en C:\pgsql\bin (ruta)
 ---------------------------------------------------------------------------------------------
 IMPORTAR:
+antes de importar crear bd con el mismo nombre..
 psql -h localhost -p 5432 -U postgres -W -d prueba -f "ruta\nombre_export.sql"

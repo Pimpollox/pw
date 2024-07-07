@@ -55,7 +55,7 @@ function CheckOut() {
         console.error('No hay usuario autenticado.');
         return;
       }
-  
+
       const productos = [];
       cartItems.forEach(item => {
         for (let i = 0; i < item.quantity; i++) {
@@ -65,26 +65,37 @@ function CheckOut() {
           }
         }
       });
-  
+
       const orderData = {
         productos,
         total: calculateTotal(),
         direccion: `${direccionEnvio.linea1}, ${direccionEnvio.linea2}, ${direccionEnvio.distrito}, ${direccionEnvio.ciudad}, ${direccionEnvio.pais}`,
         subtotal: calculateSubtotal(),
         impuesto: calculateImpuesto(),
-        envio: 10,
+        envio: envio.toFixed(2),
         fecha_orden: new Date().toISOString(),
         UserId: usuarioActual.id
       };
-  
-      console.log('Creando orden con datos:', orderData);
-  
-      await crearOrden(orderData.productos, orderData.total, orderData.direccion, orderData.fecha_orden, orderData.UserId, orderData.subtotal, orderData.impuesto, orderData.envio);
+
+      const response = await fetch('http://localhost:3080/api/ordenes/newOrder', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(orderData)
+      });
+
+      if (!response.ok) {
+        throw new Error('Error al completar la orden');
+      }
+
+      const newOrder = await response.json();
+      console.log('Orden creada:', newOrder);
+
       navigate('/pedidocompletado');
     } catch (error) {
       console.error('Error al completar la orden:', error);
     }
-    
   };
 
   
@@ -156,7 +167,7 @@ function CheckOut() {
           <div id="ResumenPedido">
             <p>Subtotal:        S/. {calculateSubtotal()}</p>
             <p>Envío:           S/. {envio.toFixed(2)}</p>
-            <p>Impuestos:       S/. 18.00</p>
+            <p>Impuestos:       S/. {calculateImpuesto()}</p>
             <p><b>Total:</b>    S/. {calculateTotal()}</p>
           </div>
         </div>

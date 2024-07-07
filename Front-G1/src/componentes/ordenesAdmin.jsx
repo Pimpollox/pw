@@ -76,7 +76,7 @@ const OrdenesAdmin = () => {
                                         <td>{order.id}</td>
                                         <td>{order.usuario}</td>
                                         <td>{format(new Date(order.fecha_orden), 'dd/MM/yyyy')}</td>
-                                        <td>{order.total}</td>
+                                        <td>S/. {order.total}</td>
                                         <td>{order.correo}</td>
                                         <td>{order.estado}</td>
                                         <td><Link to={`/ordAdmin/${order.UserId}`}>Ver</Link></td>

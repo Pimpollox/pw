@@ -1,0 +1,6 @@
+correo admin: correo@sanchez.com
+contraseña: 123
+
+usuario:
+maria.perez@example.com
+123
