@@ -12,6 +12,7 @@ function MasVendidos() {
 
   // Lógica para obtener los productos más vendidos (puedes usar filtros, ordenamiento, etc.)
   const masVendidos = modelos
+    .filter((modelo) => modelo.estado === "Activo")
     .sort((a, b) => b.precio - a.precio) // Ordenar por precio descendente (asumiendo que el precio es un número)
     .slice(0, 12); // Tomar los primeros 12 productos
 
