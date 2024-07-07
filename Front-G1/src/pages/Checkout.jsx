@@ -118,7 +118,7 @@ function CheckOut() {
         </div>
         {isQrSelected && (
           <div id="QRCode">
-            <img src="RUTAQR" alt="Código QR de Pago" />
+            <img src="./assets/QRcode.png" alt="Código QR de Pago" />
           </div>
         )}
       </div>
