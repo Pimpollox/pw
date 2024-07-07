@@ -25,7 +25,7 @@ function Home() {
       const featuredCollections = marcas.slice(0, 3);
       let featuredProductList = [];
       featuredCollections.forEach((collection) => {
-        const collectionModels = modelos.filter(model => model.MarcaId === collection.id && model.estado).slice(0, 4);
+        const collectionModels = modelos.filter(model => model.MarcaId === collection.id && model.estado === "Activo").slice(0, 4);
         featuredProductList = [...featuredProductList, ...collectionModels];
       });
       featuredProductList = featuredProductList.map((p, index) => ({
@@ -36,7 +36,7 @@ function Home() {
       const newCollections = marcas.slice(2, 5);
       let newProductList = [];
       newCollections.forEach((collection) => {
-        const collectionModels = modelos.filter(model => model.MarcaId === collection.id && model.estado).slice(0, 2);
+        const collectionModels = modelos.filter(model => model.MarcaId === collection.id && model.estado === "Activo").slice(0, 2);
         newProductList = [...newProductList, ...collectionModels];
       });
       newProductList = newProductList.map((p, index) => ({
