@@ -4,7 +4,11 @@ import './CollectionCard-Style.css';
 
 function CollectionCard({ collection }) {
   const modelo = collection.modelos && collection.modelos[0] ? collection.modelos[0] : null;
+<<<<<<< HEAD
   const imagenUrl = modelo && modelo.imagen ? modelo.imagen : '/data/6d770e1266568c74.png';
+=======
+  const imagenUrl = modelo && modelo.imagen ? modelo.imagen : '/data/imgpordefecto.jpg'; 
+>>>>>>> 824cb14520404e6cdddce334cde54457f501f5fb
 
   return (
     <div className="CollectionCard">
