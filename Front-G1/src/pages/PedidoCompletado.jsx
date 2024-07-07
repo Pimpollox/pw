@@ -1,5 +1,5 @@
 import React from 'react'
-//import ContenedorProductoCompletado from './ContenedorProductoCompletado'
+import ProductCard from './ProductCard';
 import './PedidoCompletado.css'
 import HeaderPrincipal from '../componentes/HeaderPrincipal';
 import FooterPrincipal from '../componentes/FooterPrincipal';
@@ -21,10 +21,9 @@ function PedidoCompletado() {
                 <p>Tambien te podria interesar...</p>
             </div>
             <div className="ProductosI">
-                {/* <ContenedorProductoCompletado />
-                <ContenedorProductoCompletado />
-                <ContenedorProductoCompletado />
-                <ContenedorProductoCompletado /> */}
+                {productosInteres.map(producto => (
+            <ProductCard key={producto.id} product={producto} brand={producto.marca} />
+          ))}
             </div>
         </div>
         <FooterPrincipal />
