@@ -46,3 +46,13 @@ npx sequelize seed:generate --name modelo
 
 npx sequelize db:seed:all
 npx sequelize-cli db:seed --seed nombre 
+---------------------------------------------------------------------------------------------
+EXPORTAR BD:
+antes de entrar al postgres..
+
+pg_dump -h localhost -p 5432 -U postgres -W nombre > nombre_export.sql
+
+se guarda en C:\pgsql\bin (ruta)
+---------------------------------------------------------------------------------------------
+IMPORTAR:
+psql -h localhost -p 5432 -U postgres -W -d prueba -f "ruta\nombre_export.sql"
